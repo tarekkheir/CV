@@ -28,7 +28,7 @@ body {
     background-image: linear-gradient(to bottom, rgb(247, 189, 134), steelblue);
     grid-area: left;
     display: grid;
-    grid-template-rows: 300px 280px 330px 1fr;
+    grid-template-rows: 280px 300px 330px 1fr;
     grid-template-areas:
     "image"
     "contact"
@@ -82,7 +82,7 @@ body {
     color: white;
 }
 
-#phone, #mail, #adresse, #linkedin, #permis {
+#phone, #mail, #adresse, #linkedin, #permis, #github {
     flex-basis: auto;
     font-size: 25px;
     padding-right: 1.5rem;
@@ -93,7 +93,24 @@ body {
 }
 
 #mail:hover, #linkedin:hover {
-    transform: translateY(-3px) translateX(3px);
+    transform: translateY(-2px) translateX(2px);
+    opacity: 0.8;
+}
+
+#mail-btn {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+#check {
+    margin-left: 1rem;
+    display: none;
+    font-size: 10px;
 }
 
 /*************************** COMPETENCES SECTION ***************************/
@@ -112,7 +129,7 @@ body {
     height: 10px;
 }
 
-/** 80% **/
+/** Javascript **/
 
 .compétences .progress-bar-1 {
     height: 100%;
@@ -127,7 +144,7 @@ body {
     to {width: 80%;}
 }
 
-/** 60% **/
+/** Python **/
 
 .compétences .progress-bar-2 {
     height: 100%;
@@ -139,10 +156,10 @@ body {
 
 @keyframes fill-bar-2 {
     from {width: 0%;}
-    to {width: 60%;}
+    to {width: 70%;}
 }
 
-/** 70% **/
+/** C **/
 
 .compétences .progress-bar-3 {
     height: 100%;
@@ -154,10 +171,10 @@ body {
 
 @keyframes fill-bar-3 {
     from {width: 0%;}
-    to {width: 70%;}
+    to {width: 75%;}
 }
 
-/** 90% **/
+/** HTML5 **/
 
 .compétences .progress-bar-4 {
     height: 100%;
@@ -172,7 +189,7 @@ body {
     to {width: 90%;}
 }
 
-/** 85% **/
+/** CSS3 **/
 
 .compétences .progress-bar-5 {
     height: 100%;
@@ -184,7 +201,7 @@ body {
 
 @keyframes fill-bar-5 {
     from {width: 0%;}
-    to {width: 85%;}
+    to {width: 90%;}
 }
 
 .compétences-list {
@@ -248,11 +265,14 @@ body {
     align-items: center;
     margin: 10px auto;
     transition: transform 250ms;
+    position: relative;
 }
 
 .circle:hover {
-    transform: translateY(-4px);
+    /* transform: translateY(-4px); */
     cursor: pointer;
+    background-color: rgb(247, 189, 134);
+    transition: 0.5s;
 }
 
 .circle-container {
@@ -292,17 +312,54 @@ body {
     font-size: 50px;
 }
 
+.circle .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    height: 60px;
+    background-color: rgb(241, 241, 241);
+    color: rgba(10, 10, 10, 0.788);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -90px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 15px;
+    list-style: none;
+}
+
+.circle .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(241, 241, 241) transparent transparent transparent;
+}
+
+.circle:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
 /*************************** >>> RIGHT SIDE ***************************/
 
 .right-side {
     background-color: whitesmoke;
     grid-area: right;
     display: grid;
-    grid-template-rows: 200px 300px 500px 1fr;
+    grid-template-rows: 180px 280px 220px 300px 1fr;
     grid-template-areas:
         "présentation"
         "formation"
         "expériences"
+        "projets"
         "soft-skills";
     padding: 1rem 3rem;
     gap: 2rem;
@@ -353,8 +410,8 @@ body {
 }
 
 .logo {
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     grid-area: logo;
     object-fit: cover;
     border-radius: 5px;
@@ -386,41 +443,101 @@ body {
     cursor: pointer;
 }
 
-#overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
+#overlay-holberton, #overlay-upec, #overlay-champlain {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.527); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    cursor: pointer;
 }
 
 #text {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 50px;
     color: white;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
+    width: 700px;
+    height: 800px;
+    background-image: linear-gradient(to bottom, steelblue, rgb(127, 163, 180));
+    padding: 1rem;
+    display: grid;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 10px rgba(204, 204, 204, 0.568);
 }
 
 /*************************** EXPÉRIENCES SECTION ***************************/
 
 .expériences {
     grid-area: expériences;
-    margin-top: 2rem;
 }
 
 .expériences-list {
+    list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 70px 70px;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.expériences-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+.infos {
+    display: grid;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.infos span {
+    opacity: 0.7;
+}
+
+.infos ul {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.infos-list {
+    padding-top: 5px;
+    font-size: 10px;
+    display: grid;
+    margin: auto;
+    color: rgba(70, 131, 180, 0.822);
+}
+
+#subway, #dominos, #metro {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    padding: 0.5rem;
+    align-content: center;
+    box-shadow: rgba(77, 77, 77, 0.061) 5px 5px;
+    border-radius: 5px;
+}
+
+/*************************** PROJETS SECTION ***************************/
+
+.projets {
+    grid-area: projets;
+    margin-top: 1rem;
+}
+
+.projets-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 80px;
     list-style: none;
     padding: 1rem;
     gap: 2rem 1rem;
@@ -430,7 +547,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem;
     box-shadow: rgba(70, 131, 180, 0.4) 5px 5px, rgba(70, 130, 180, 0.3) 10px 10px, rgba(70, 130, 180, 0.2) 15px 15px, rgba(70, 130, 180, 0.1) 20px 20px, rgba(70, 130, 180, 0.05) 25px 25px;
     border: 0;
     background-color: whitesmoke;
@@ -454,33 +571,38 @@ body {
 
 .simple-shell-content, .airbnb-content, .files-manager-content, .scraping-content {
     display: grid;
-    grid-template-rows: 80px 60px;
+    grid-template-columns: 50px 1fr;
 }
 
-.simple-shell-img, .scraping-img, .files-manager-img {
+.simple-shell-img, .airbnb-img, .scraping-img, .files-manager-img {
     object-fit: cover;
     border-radius: 10px;
-    max-height: 80px;
-    max-width: 80px;
-    margin: auto;
+    max-height: 40px;
+    max-width: 40px;
+    margin: auto 0;
     filter: grayscale();
     transition: filter 0.2s ease-in-out;
 }
 
-.airbnb-img {
-    object-fit: cover;
-    border-radius: 10px;
-    max-height: 150px;
-    max-width: 150px;
-    margin: auto;
-    filter: grayscale();
-    transition: filter 0.2s ease-in-out;
+.projets button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 
 /*************************** SOFT-SKILLS SECTION ***************************/
 
 .soft-skills {
     grid-area: soft-skills;
+    display: grid;
+}
+
+.soft-skills h2 {
+    margin-bottom: 0;
 }
 
 .soft-skills-list {
@@ -489,6 +611,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0.8rem;
+    /* margin: 0; */
 }
 
 .soft-skills-list .box {
