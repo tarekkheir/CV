@@ -15,7 +15,7 @@ body {
     min-width: 700px;
     display: grid;
     grid-template-columns: 35% 65%;
-    grid-template-areas: 
+    grid-template-areas:
         "left right";
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.137);
     border-radius: 10px;
@@ -30,11 +30,12 @@ body {
     display: grid;
     grid-template-rows: 280px 300px 330px 1fr;
     grid-template-areas:
-    "image"
-    "contact"
-    "compétences"
-    "intérêts";
+        "image"
+        "contact"
+        "compétences"
+        "intérêts";
 }
+
 /*************************** IMAGE SECTION ***************************/
 
 .image {
@@ -82,17 +83,24 @@ body {
     color: white;
 }
 
-#phone, #mail, #adresse, #linkedin, #permis, #github {
+#phone,
+#mail,
+#adresse,
+#linkedin,
+#permis,
+#github {
     flex-basis: auto;
     font-size: 25px;
     padding-right: 1.5rem;
 }
 
-#mail, #linkedin {
+#mail,
+#linkedin {
     transition: transform 250ms;
 }
 
-#mail:hover, #linkedin:hover {
+#mail:hover,
+#linkedin:hover {
     transform: translateY(-2px) translateX(2px);
     opacity: 0.8;
 }
@@ -140,8 +148,13 @@ body {
 }
 
 @keyframes fill-bar-1 {
-    from {width: 0%;}
-    to {width: 80%;}
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 80%;
+    }
 }
 
 /** Python **/
@@ -155,8 +168,13 @@ body {
 }
 
 @keyframes fill-bar-2 {
-    from {width: 0%;}
-    to {width: 70%;}
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 70%;
+    }
 }
 
 /** C **/
@@ -170,8 +188,13 @@ body {
 }
 
 @keyframes fill-bar-3 {
-    from {width: 0%;}
-    to {width: 75%;}
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 75%;
+    }
 }
 
 /** HTML5 **/
@@ -185,8 +208,13 @@ body {
 }
 
 @keyframes fill-bar-4 {
-    from {width: 0%;}
-    to {width: 90%;}
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 90%;
+    }
 }
 
 /** CSS3 **/
@@ -200,8 +228,13 @@ body {
 }
 
 @keyframes fill-bar-5 {
-    from {width: 0%;}
-    to {width: 90%;}
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 90%;
+    }
 }
 
 .compétences-list {
@@ -244,8 +277,8 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 150px 150px;
     grid-template-areas:
-    "basketball tourisme"
-    "piano lecture";
+        "basketball tourisme"
+        "piano lecture";
     gap: 1rem 3rem;
 }
 
@@ -308,7 +341,10 @@ body {
     grid-template-rows: 100px 1fr;
 }
 
-#basketball, #globe, #piano, #book {
+#basketball,
+#globe,
+#piano,
+#book {
     font-size: 50px;
 }
 
@@ -397,7 +433,9 @@ body {
     color: rgba(70, 131, 180, 0.822);
 }
 
-.holberton, .upec, .champlain {
+.holberton,
+.upec,
+.champlain {
     display: grid;
     gap: 1rem;
     background-image: linear-gradient(to left, rgba(245, 245, 245, 0.342), rgba(70, 131, 180, 0.061));
@@ -443,7 +481,9 @@ body {
     cursor: pointer;
 }
 
-#overlay-holberton, #overlay-upec, #overlay-champlain {
+#overlay-holberton,
+#overlay-upec,
+#overlay-champlain {
     position: fixed;
     display: none;
     width: 100%;
@@ -462,16 +502,15 @@ body {
     top: 50%;
     left: 50%;
     color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    width: 700px;
-    height: 800px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    min-width: 700px;
+    max-height: 800px;
     background-image: linear-gradient(to bottom, steelblue, rgb(127, 163, 180));
     padding: 1rem;
     display: grid;
     font-size: 20px;
     border-radius: 10px;
-    box-shadow: 10px 5px 10px rgba(204, 204, 204, 0.568);
 }
 
 /*************************** EXPÉRIENCES SECTION ***************************/
@@ -518,7 +557,9 @@ body {
     color: rgba(70, 131, 180, 0.822);
 }
 
-#subway, #dominos, #metro {
+#subway,
+#dominos,
+#metro {
     display: grid;
     grid-template-columns: 50px 1fr;
     padding: 0.5rem;
@@ -543,7 +584,10 @@ body {
     gap: 2rem 1rem;
 }
 
-.simple-shell, .airbnb, .files-manager, .scraping {
+.simple-shell,
+.airbnb,
+.files-manager,
+.scraping {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -554,27 +598,42 @@ body {
     transition: 0.1s ease-in-out;
 }
 
-.simple-shell:hover, .airbnb:hover, .files-manager:hover, .scraping:hover {
+.simple-shell:hover,
+.airbnb:hover,
+.files-manager:hover,
+.scraping:hover {
     background-color: rgba(179, 179, 179, 0.13);
     cursor: pointer;
 }
 
-.simple-shell:hover img, .airbnb:hover img, .files-manager:hover img, .scraping:hover img {
+.simple-shell:hover img,
+.airbnb:hover img,
+.files-manager:hover img,
+.scraping:hover img {
     filter: none;
 }
 
-.simple-shell:active, .airbnb:active, .files-manager:active, .scraping:active {
+.simple-shell:active,
+.airbnb:active,
+.files-manager:active,
+.scraping:active {
     background-color: rgba(179, 179, 179, 0.13);
     transform: translateY(10px) translateX(10px);
     box-shadow: rgba(70, 131, 180, 0.4) 5px 5px;
 }
 
-.simple-shell-content, .airbnb-content, .files-manager-content, .scraping-content {
+.simple-shell-content,
+.airbnb-content,
+.files-manager-content,
+.scraping-content {
     display: grid;
     grid-template-columns: 50px 1fr;
 }
 
-.simple-shell-img, .airbnb-img, .scraping-img, .files-manager-img {
+.simple-shell-img,
+.airbnb-img,
+.scraping-img,
+.files-manager-img {
     object-fit: cover;
     border-radius: 10px;
     max-height: 40px;
