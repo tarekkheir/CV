@@ -343,9 +343,43 @@ body {
 
 #basketball,
 #globe,
-#piano,
 #book {
     font-size: 50px;
+}
+
+.gg-piano {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 50px;
+    height: 32px;
+    border: 2px solid;
+    border-radius: 2px
+}
+
+.gg-piano::after,
+.gg-piano::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    height: 20px;
+    background: currentColor;
+    box-shadow:
+        10px 0 0,
+        20px 0 0
+}
+
+.gg-piano::before {
+    top: -2px;
+    width: 5px;
+    left: 10px
+}
+.gg-piano::after {
+    width: 1px;
+    bottom: -2px;
+    left: 12px
 }
 
 .circle .tooltiptext {
