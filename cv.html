@@ -8,7 +8,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./styles/index.css">
         <script src="./script.js"></script>
         <title>CV</title>
     </head>
@@ -22,7 +22,7 @@
                 </div>
                 <!-------- CONTACT -------->
                 <div class="contact center">
-                    <h2>Contacts</h2>
+                    <h2 id="contacts">Contacts</h2>
                     <ul class="contact-list">
                         <li>
                             <i id="phone" class="fa fa-phone"></i>
@@ -62,7 +62,7 @@
                 </div>
                 <!-------- COMPÉTENCES -------->
                 <div class="compétences center">
-                    <h2>Technos pratiquées</h2>
+                    <h2 id="technos">Technos pratiquées</h2>
                     <ul class="compétences-list">
                         <li>
                             <img class="logo" src="./images/javascript-programming-language.png" alt="Javascript logo">
@@ -124,7 +124,7 @@
                 </div>
                 <!-------- INTÉRÊTS -------->
                 <div class="intérêts">
-                    <h2>Intérêts & Loisirs</h2>
+                    <h2 id="intéres">Intérêts & Loisirs</h2>
                     <ul class="intérêts-list">
                         <li class="basketball">
                             <div class="circle">
@@ -217,7 +217,7 @@
                                 </div>
                             </button>
                         </form>
-                        <form class="scraping" action="https://github.com/tarekkheir/files-manager" target="_blank">
+                        <form class="scraping" action="https://github.com/tarekkheir/Scraping" target="_blank">
                             <button>
                                 <div class="scraping-content">
                                     <img class="scraping-img" src="./images/scraping.png" alt="Scraping image">
@@ -292,7 +292,8 @@
                                         <p>Passioné par les nouvelles technologies je me suis naturellement dirigé
                                             vers une licence qui proposait une formation sur les sciences de
                                             l'ingénieur,
-                                            j'ai choisi l'électronique et le génie informatique en deuxième année.
+                                            j'ai choisi l'électronique et le génie informatique comme spécialité
+                                            en deuxième année.
                                         </p>
                                     </div>
                                     <div class="q2">
@@ -328,7 +329,7 @@
                             <img class="logo" src="./images/holberton.png" alt="holberton logo">
                             <div class="text">
                                 <h4>Software Engineer</h4>
-                                <span>Holberton School Paris & San Francisco (2020 - en cours)</span>
+                                <span>Holberton School Paris (2020 - 2022)</span>
                             </div>
                             <button class="info" onclick="on_holberton()">
                                 <i class="fas fa-info"></i>
@@ -429,15 +430,14 @@
                 <div class="soft-skills">
                     <h2>Compétences secondaires</h2>
                     <ul class="soft-skills-list">
-                        <li class="box">Excel</li>
-                        <li class="box">Rédaction de blog</li>
                         <li class="box">Github</li>
+                        <li class="box">Excel</li>
+                        <li class="box">Figma</li>
                         <li class="box">Travail d'équipe</li>
                         <li class="box">Coopération</li>
                         <li class="box">Autonomie</li>
                     </ul>
                 </div>
-                <a href="javascript:generatePDF()">Download PDF</a>
             </div>
         </div>
     </body>

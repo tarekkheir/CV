@@ -1,0 +1,394 @@
+.left-side {
+    /* background: linear-gradient(to bottom, rgba(251, 172, 119, 0.493), steelblue); */
+    background-image: linear-gradient(to bottom, rgb(247, 189, 134), steelblue);
+    grid-area: left;
+    display: grid;
+    grid-template-rows: 280px 300px 330px 1fr;
+    grid-template-areas:
+        "image"
+        "contact"
+        "compétences"
+        "intérêts";
+}
+
+/*************************** IMAGE SECTION ***************************/
+
+.image {
+    max-height: 300px;
+    grid-area: image;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.id-img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.109);
+}
+
+/*************************** CONTACT SECTION ***************************/
+
+.contact {
+    /* background-color: thistle; */
+    grid-area: contact;
+    color: white;
+}
+
+.contact h2 {
+    margin-top: 0;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+}
+
+.contact-list li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-list a {
+    color: white;
+}
+
+#phone,
+#mail,
+#adresse,
+#linkedin,
+#permis,
+#github {
+    flex-basis: auto;
+    font-size: 25px;
+    padding-right: 1.5rem;
+}
+
+#mail,
+#linkedin {
+    transition: transform 250ms;
+}
+
+#mail:hover {
+    transform: translateY(-2px) translateX(2px);
+    opacity: 0.8;
+}
+
+#mail-btn {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+#check {
+    margin-left: 1rem;
+    display: none;
+    font-size: 10px;
+}
+
+/*************************** COMPETENCES SECTION ***************************/
+
+.compétences {
+    /* background-color: tomato; */
+    grid-area: compétences;
+    color: white;
+}
+
+.compétences .progress {
+    width: 100%;
+    max-width: 125px;
+    border: 2px solid white;
+    border-radius: 30px;
+    height: 10px;
+}
+
+/** Javascript **/
+
+.compétences .progress-bar-1 {
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    border-radius: 30px;
+    animation: fill-bar-1 1.5s normal forwards ease-in-out;
+}
+
+@keyframes fill-bar-1 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 80%;
+    }
+}
+
+/** Python **/
+
+.compétences .progress-bar-2 {
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    border-radius: 30px;
+    animation: fill-bar-2 1.5s normal forwards ease-in-out;
+}
+
+@keyframes fill-bar-2 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 70%;
+    }
+}
+
+/** C **/
+
+.compétences .progress-bar-3 {
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    border-radius: 30px;
+    animation: fill-bar-3 1.5s normal forwards ease-in-out;
+}
+
+@keyframes fill-bar-3 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 75%;
+    }
+}
+
+/** HTML5 **/
+
+.compétences .progress-bar-4 {
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    border-radius: 30px;
+    animation: fill-bar-4 1.5s normal forwards ease-in-out;
+}
+
+@keyframes fill-bar-4 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 90%;
+    }
+}
+
+/** CSS3 **/
+
+.compétences .progress-bar-5 {
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    border-radius: 30px;
+    animation: fill-bar-5 1.5s normal forwards ease-in-out;
+}
+
+@keyframes fill-bar-5 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 90%;
+    }
+}
+
+.compétences-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.compétences-list li {
+    display: grid;
+    grid-template-columns: 30px 100px 1fr;
+    grid-template-areas:
+        "logo name bar";
+}
+
+.compétences-list .logo {
+    max-width: 20px;
+    max-height: 20px;
+    grid-area: logo;
+}
+
+/*************************** INTERETS SECTION ***************************/
+
+.intérêts {
+    grid-area: intérêts;
+    color: white;
+    padding: 0 2rem 0 3rem;
+}
+
+.intérêts h2 {
+    margin-bottom: 1rem;
+}
+
+.intérêts-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 150px;
+    grid-template-areas:
+        "basketball tourisme"
+        "piano lecture";
+    gap: 1rem 3rem;
+}
+
+.intérêts-list span {
+    display: inline-block;
+    text-align: center;
+    margin-top: 0.7rem;
+}
+
+.circle {
+    border: 2px solid white;
+    border-radius: 50%;
+    min-height: 80px;
+    min-width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    transition: transform 250ms;
+    position: relative;
+}
+
+.circle:hover {
+    /* transform: translateY(-4px); */
+    cursor: pointer;
+    background-color: rgb(247, 189, 134);
+    transition: 0.5s;
+}
+
+.circle-container {
+    min-width: 150px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basketball {
+    grid-area: basketball;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+
+.tourisme {
+    grid-area: tourisme;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+.piano {
+    grid-area: piano;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+.lecture {
+    grid-area: lecture;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+#basketball,
+#globe,
+#book {
+    font-size: 50px;
+}
+
+.gg-piano {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 50px;
+    height: 32px;
+    border: 2px solid;
+    border-radius: 2px
+}
+
+.gg-piano::after,
+.gg-piano::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    height: 20px;
+    background: currentColor;
+    box-shadow:
+        10px 0 0,
+        20px 0 0
+}
+
+.gg-piano::before {
+    top: -2px;
+    width: 5px;
+    left: 10px
+}
+
+.gg-piano::after {
+    width: 1px;
+    bottom: -2px;
+    left: 12px
+}
+
+.circle .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    height: 60px;
+    background-color: rgb(241, 241, 241);
+    color: rgba(10, 10, 10, 0.788);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -90px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 15px;
+    list-style: none;
+}
+
+.circle .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(241, 241, 241) transparent transparent transparent;
+}
+
+.circle:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
