@@ -74,10 +74,10 @@
     transition: transform 250ms;
 }
 
-#mail:hover {
-    transform: translateY(-2px) translateX(2px);
-    opacity: 0.8;
-}
+// #mail:hover {
+//     transform: translateY(-2px) translateX(2px);
+//     opacity: 0.8;
+// }
 
 #mail-btn {
     background: none;
@@ -87,6 +87,8 @@
     font: inherit;
     cursor: pointer;
     outline: inherit;
+    margin-left: 1rem;
+    font-size: 15px;
 }
 
 #check {
