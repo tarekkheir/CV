@@ -34,4 +34,5 @@ function copyText() {
   document.execCommand("Copy");
   textArea.remove();
   document.getElementById('check').style.display = "block";
+  document.getElementById('mail-btn').style.display = "none";
 }
