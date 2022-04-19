@@ -15,6 +15,74 @@
     gap: 2rem;
 }
 
+@media screen and (max-width: 850px) {
+    .right-side {
+        grid-area: down;
+        grid-template-rows: 280px 1fr 1fr 300px 200px;
+        grid-template-areas:
+            "présentation"
+            "formation"
+            "expériences"
+            "projets"
+            "soft-skills";
+        padding: 1rem;
+    }
+
+    .présentation {
+        display: grid;
+        margin-right: 1.5rem;
+
+        h1,
+        h3,
+        p {
+            margin: 0.5rem;
+        }
+
+        box-shadow: 0px 24px 3px -24px rgb(109, 108, 109);
+    }
+
+    .formation {
+        max-width: 90%;
+    }
+
+    .expériences {
+        max-width: 95%;
+
+        .expériences-list {
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .projets {
+        .projets-list {
+            padding: 0;
+            margin-right: 0.5rem;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    }
+
+    .soft-skills {
+        .soft-skills-list {
+            list-style: none;
+            padding-right: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+        }
+    }
+}
+
+@media screen and (max-width: 881px) and (min-width: 850px) {
+    .expériences .expériences-list .infos-list {
+        display: none;
+    }
+}
+
 
 /*************************** PRÉSENTATION SECTION ***************************/
 
@@ -119,8 +187,9 @@
     color: rgb(0, 0, 0);
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    min-width: 700px;
-    max-height: 1300px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
     background-color: rgb(245, 245, 245);
     padding: 1rem;
     display: grid;
@@ -312,6 +381,13 @@
 .center {
     padding: 0 0.5rem 0 3rem;
 }
+
+@media only screen and (max-width: 881px) and (min-width: 850px) {
+    .center {
+        padding: 0 0 0 0.5rem;
+    }
+}
+
 
 .color-grey {
     color: rgb(158, 157, 157);

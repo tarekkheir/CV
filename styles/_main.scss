@@ -10,13 +10,25 @@ body {
 .page {
     margin: 3rem auto;
     overflow: hidden;
-    max-height: 1300px;
+    // max-height: 1300px;
     max-width: 1000px;
-    min-width: 700px;
     display: grid;
     grid-template-columns: 35% 65%;
     grid-template-areas:
         "left right";
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.137);
     border-radius: 10px;
+}
+
+@media screen and (max-width: 850px) {
+    .page {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "up"
+            "down";
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.137);
+        border-radius: 10px;
+        max-width: 400px;
+    }
 }

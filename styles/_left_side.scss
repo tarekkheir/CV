@@ -9,7 +9,17 @@
         "contact"
         "compétences"
         "intérêts";
+
+    max-height: 1300px;
 }
+
+
+@media screen and (max-width: 850px) {
+    .left-side {
+        grid-area: up;
+    }
+}
+
 
 /*************************** IMAGE SECTION ***************************/
 

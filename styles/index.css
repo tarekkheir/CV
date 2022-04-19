@@ -10,23 +10,33 @@ body {
 .page {
   margin: 3rem auto;
   overflow: hidden;
-  max-height: 1300px;
   max-width: 1000px;
-  min-width: 700px;
   display: grid;
   grid-template-columns: 35% 65%;
   grid-template-areas: "left right";
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.137);
   border-radius: 10px; }
 
+@media screen and (max-width: 850px) {
+  .page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "up" "down";
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.137);
+    border-radius: 10px;
+    max-width: 400px; } }
 .left-side {
   /* background: linear-gradient(to bottom, rgba(251, 172, 119, 0.493), steelblue); */
   background-image: linear-gradient(to bottom, #f7bd86, steelblue);
   grid-area: left;
   display: grid;
   grid-template-rows: 280px 300px 330px 1fr;
-  grid-template-areas: "image" "contact" "compétences" "intérêts"; }
+  grid-template-areas: "image" "contact" "compétences" "intérêts";
+  max-height: 1300px; }
 
+@media screen and (max-width: 850px) {
+  .left-side {
+    grid-area: up; } }
 /*************************** IMAGE SECTION ***************************/
 .image {
   max-height: 300px;
@@ -336,6 +346,47 @@ body {
   padding: 1rem 3rem;
   gap: 2rem; }
 
+@media screen and (max-width: 850px) {
+  .right-side {
+    grid-area: down;
+    grid-template-rows: 280px 1fr 1fr 300px 200px;
+    grid-template-areas: "présentation" "formation" "expériences" "projets" "soft-skills";
+    padding: 1rem; }
+
+  .présentation {
+    display: grid;
+    margin-right: 1.5rem;
+    box-shadow: 0px 24px 3px -24px #6d6c6d; }
+    .présentation h1,
+    .présentation h3,
+    .présentation p {
+      margin: 0.5rem; }
+
+  .formation {
+    max-width: 90%; }
+
+  .expériences {
+    max-width: 95%; }
+    .expériences .expériences-list {
+      display: block;
+      padding: 0;
+      margin: 0; }
+
+  .projets .projets-list {
+    padding: 0;
+    margin-right: 0.5rem; }
+  .projets h2 {
+    margin-top: 0; }
+
+  .soft-skills .soft-skills-list {
+    list-style: none;
+    padding-right: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem; } }
+@media screen and (max-width: 881px) and (min-width: 850px) {
+  .expériences .expériences-list .infos-list {
+    display: none; } }
 /*************************** PRÉSENTATION SECTION ***************************/
 .présentation {
   grid-area: présentation; }
@@ -424,8 +475,9 @@ body {
   color: black;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  min-width: 700px;
-  max-height: 1300px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
   background-color: whitesmoke;
   padding: 1rem;
   display: grid;
@@ -451,7 +503,8 @@ body {
 .expériences-img {
   height: 50px;
   width: 50px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  object-fit: cover; }
 
 .infos {
   display: grid;
@@ -587,6 +640,9 @@ body {
 .center {
   padding: 0 0.5rem 0 3rem; }
 
+@media only screen and (max-width: 881px) and (min-width: 850px) {
+  .center {
+    padding: 0 0 0 0.5rem; } }
 .color-grey {
   color: #9e9d9d; }
 
