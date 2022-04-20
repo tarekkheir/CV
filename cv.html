@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./styles/index.css">
+        <script src="./script.js"></script>
+        <title>CV</title>
+    </head>
+
+    <body>
+        <div class="page">
+            <!--------------------- LEFT SIDE --------------------->
+            <div class="left-side">
+                <div class="image">
+                    <img class="id-img" src="./images/Photo_tarek_recadrée_couleur.jpg" alt="Photo Tarek">
+                </div>
+                <!-------- CONTACT -------->
+                <div class="contact center">
+                    <h2 id="contacts">Contacts</h2>
+                    <ul class="contact-list">
+                        <li>
+                            <i id="phone" class="fa fa-phone"></i>
+                            <span>06 76 11 54 48</span>
+                        </li>
+                        <li>
+                            <i id="mail" class="fa fa-envelope"></i>
+                            <span id="mailToCopy">kheirtarek@hotmail.fr</span>
+                            <button id="mail-btn" onclick="copyText()"><i class="fas fa-copy"></i></button>
+                            <div id="check">
+                                <span>Copié</span>
+                                <i class="fa fa-check-circle"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <i id="adresse" class="fa fa-location-arrow"></i>
+                            <span>Chennevières-sur-marne, 94430</span>
+                        </li>
+                        <li>
+                            <i id="permis" class="fa fa-car"></i>
+                            <span>Permis B</span>
+                        </li>
+                        <li>
+                            <a href="https://github.com/tarekkheir" target="_blank">
+                                <i id="github" class="fab fa-github"></i>
+                                <span>Github</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/tarek-kheir-9608a61b7/" target="_blank">
+                                <i id="linkedin" class="fab fa-linkedin-in"></i>
+                                <span>Linkedin</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-------- COMPÉTENCES -------->
+                <div class="compétences center">
+                    <h2 id="technos">Technos maîtrisées</h2>
+                    <ul class="compétences-list">
+                        <li>
+                            <img class="logo" src="./images/javascript-programming-language.png" alt="Javascript logo">
+                            <span>Javascript</span>
+                            <div class="progress">
+                                <div class="progress-bar-1"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="logo" src="./images/python-programming-language.png" alt="Python logo">
+                            <span>Python</span>
+                            <div class="progress">
+                                <div class="progress-bar-2"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="logo" src="./images/c-program.png" alt="C logo">
+                            <span>C</span>
+                            <div class="progress">
+                                <div class="progress-bar-3"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="logo" src="./images/html.png" alt="HTML logo">
+                            <span>HTML5</span>
+                            <div class="progress">
+                                <div class="progress-bar-4"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="logo" src="./images/css.png" alt="CSS logo">
+                            <span>CSS3</span>
+                            <div class="progress">
+                                <div class="progress-bar-5"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="logo" src="./images/react.png" alt="React logo">
+                            <span>ReactJs</span>
+                            <div class="progress">
+                                <div class="progress-bar-2"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="logo" src="./images/nodejs.png" alt="NodeJs logo">
+                            <span>NodeJs</span>
+                            <div class="progress">
+                                <div class="progress-bar-2"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="logo" src="./images/linux-ubuntu.png" alt="Linux logo">
+                            <span>Linux</span>
+                            <div class="progress">
+                                <div class="progress-bar-4"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-------- INTÉRÊTS -------->
+                <div class="intérêts">
+                    <h2 id="intéres">Intérêts & Loisirs</h2>
+                    <ul class="intérêts-list">
+                        <li class="basketball">
+                            <div class="circle">
+                                <i id="basketball" class="fas fa-basketball-ball"></i>
+                                <ul class="tooltiptext">
+                                    <li>Coupe de France IUT</li>
+                                    <li>Champion du 94</li>
+                                    <li>Coupe du 94</li>
+                                </ul>
+                            </div>
+                            <span>Basketball National</span>
+                        </li>
+                        <li class="tourisme">
+                            <div class="circle">
+                                <i id="globe" class="fas fa-globe-americas"></i>
+                                <ul class="tooltiptext">
+                                    <li>Animaux</li>
+                                    <li>Voyages</li>
+                                    <li>Découvertes</li>
+                                </ul>
+                            </div>
+                            <span>Tourisme & Nature</span>
+                        </li>
+                        <li class="piano">
+                            <div class="circle">
+                                <i id="piano" class="gg-piano"></i>
+                                <ul class="tooltiptext">
+                                    <li>Musique classique</li>
+                                    <li>Films</li>
+                                    <li>Compositions personnel</li>
+                                </ul>
+                            </div>
+                            <span>Piano</span>
+                        </li>
+                        <li class="lecture">
+                            <div class="circle">
+                                <i id="book" class="fas fa-book"></i>
+                                <ul class="tooltiptext">
+                                    <li>Finances</li>
+                                    <li>Psychologie</li>
+                                    <li>Corps humain</li>
+                                </ul>
+                            </div>
+                            <span>Lecture</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--------------------- RIGHT SIDE --------------------->
+            <div class="right-side">
+                <!-------- PRÉSENTATION -------->
+                <div class="présentation">
+                    <h1>TareK <span class="color-grey">Kheir</span></h1>
+                    <h3 class="color-steelblue">Développeur Web Full Stack</h3>
+                    <p>Hello, doté d'une personnalité <strong>dynamique</strong> et <strong>engagée</strong>,
+                        j’ai toujours été passionné par les nouvelles technologies et tout ce qui touche à
+                        <strong>l’innovation</strong>. Fraîchement dîplomé je suis disponible dès à
+                        présent pour le poste de
+                        <strong>Développeur Web Full Stack.</strong>
+                    </p>
+                </div>
+                <!-------- PROJETS -------->
+                <div class="projets">
+                    <h2>Quelques projets réalisés</h2>
+                    <div class="projets-list">
+                        <form class="simple-shell" action="https://github.com/tarekkheir/simple_shell" target="_blank">
+                            <button>
+                                <div class="simple-shell-content">
+                                    <img class="simple-shell-img" src="./images/bash.png" alt="Bash icon">
+                                    <h4>SIMPLE SHELL</h4>
+                                </div>
+                            </button>
+                        </form>
+                        <form class="airbnb" action="https://github.com/tarekkheir/AirBnB_clone" target="_blank">
+                            <button>
+                                <div class="airbnb-content">
+                                    <img class="airbnb-img" src="./images/airbnb.png" alt="Airbnb clone icon">
+                                    <h4>AIRBNB CLONE</h4>
+                                </div>
+                            </button>
+                        </form>
+                        <form class="files-manager" action="https://github.com/tarekkheir/holbertonschool-files_manager"
+                            target="_blank">
+                            <button>
+                                <div class="files-manager-content">
+                                    <img class="files-manager-img" src="./images/files-manager.png"
+                                        alt="Files manager icon">
+                                    <h4>FILES MANAGER</h4>
+                                </div>
+                            </button>
+                        </form>
+                        <form class="scraping" action="https://github.com/tarekkheir/Scraping" target="_blank">
+                            <button>
+                                <div class="scraping-content">
+                                    <img class="scraping-img" src="./images/scraping.png" alt="Scraping image">
+                                    <h4>SCRAPING</h4>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-------- FORMATIONS -------->
+                <div class="formation">
+                    <h2>Formations</h2>
+                    <ul class="formation-list">
+                        <li class="champlain">
+                            <img class="logo" src="./images/champlain.png" alt="Champlain logo">
+                            <div class="text">
+                                <h4>Baccalauréat Scientifique</h4>
+                                <span>Lycée Champlain (2017)</span>
+                            </div>
+                            <button class="info" onclick="on_champlain()">
+                                <i class="fas fa-info"></i>
+                            </button>
+                            <div id="overlay-champlain" onclick="off_champlain()">
+                                <div id="text">
+                                    <div class="q1">
+                                        <h3>
+                                            Pourquoi j'ai choisi ce cursus
+                                        </h3>
+                                        <p>Scientifique dans l'âme le Bac S était la seule option envisageable.
+                                            J'ai choisi la spécialité Physique Chimie en Terminale.
+                                        </p>
+                                    </div>
+                                    <div class="q2">
+                                        <h3>
+                                            Mon expérience
+                                        </h3>
+                                        <p>J'ai passé 3 années de lycée mémorables et la voie scientifique
+                                            répondait parfaitement à mes attentes.
+                                        </p>
+                                    </div>
+                                    <div class="q3">
+                                        <h3>
+                                            Bilan et avis personnel
+                                        </h3>
+                                        <p>Bac en poche j'ai ressenti la fierté d'avoir réussi mes examens
+                                            et j'étais impatient de découvrir les études dans le supérieur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="upec">
+                            <img class="logo" src="./images/upec.png" alt="Upec logo">
+                            <div class="text">
+                                <h4>Licence Électronique et Génie Informatique</h4>
+                                <span>Université Paris-Est-Créteil (2017-2020)</span>
+                            </div>
+                            <button class="info" onclick="on_upec()">
+                                <i class="fas fa-info"></i>
+                            </button>
+                            <div id="overlay-upec" onclick="off_upec()">
+                                <div id="text">
+                                    <div class="q1">
+                                        <h3>
+                                            Pourquoi j'ai choisi ce cursus
+                                        </h3>
+                                        <p>Passioné par les nouvelles technologies j'ai choisi une
+                                            une Licence en Électronique et Génie informatique.
+                                        </p>
+                                    </div>
+                                    <div class="q2">
+                                        <h3>
+                                            Mon expérience
+                                        </h3>
+                                        <p>Expérimentation des travaux en laboratoire et réalisation
+                                            de projets électroniques complets tel que la conception d'engins dirigables
+                                            à distance et la programmation d'objets connectés.
+                                        </p>
+                                    </div>
+                                    <div class="q3">
+                                        <h3>
+                                            Bilan et avis personnel
+                                        </h3>
+                                        <p>Cette expérience a été riche en savoir et m'a permis de découvrir
+                                            mes forces et mes faiblesses. Je savais ce que je voulais devenir
+                                            et je me suis concentré sur l'informatique.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="holberton">
+                            <img class="logo" src="./images/holberton.png" alt="holberton logo">
+                            <div class="text">
+                                <h4>Software Engineer</h4>
+                                <span>Holberton School Paris (2020 - 2022)</span>
+                            </div>
+                            <button class="info" onclick="on_holberton()">
+                                <i class="fas fa-info"></i>
+                            </button>
+                            <div id="overlay-holberton" onclick="off_holberton()">
+                                <div id="text">
+                                    <div class="q1">
+                                        <h3>
+                                            Pourquoi j'ai choisi ce cursus
+                                        </h3>
+                                        <p>Après avoir découvert l'informatique j'ai décidé de me dirigé vers la
+                                            programmation et
+                                            plus précisémment, le développement Web.<br><br> Formation intensive et
+                                            intégralement anglophone en deux étapes, les fondamentaux et la
+                                            spécialisation.
+                                            Durée totale de 2 ans pour l'équivalent d'un bac +3/4 <br><br>( Titre RNCP
+                                            31678
+                                            de niveau 6 )
+                                        </p>
+                                    </div>
+                                    <div class="q2">
+                                        <h3>
+                                            Mon expérience
+                                        </h3>
+                                        <p>En mesure de développer une application web de A à Z ( back et front ) en
+                                            m'appuyant sur
+                                            des bases solides en développement de bas niveau, réseaux et devops dès la
+                                            fin
+                                            de la première année.
+                                            <br><br>Mise en place d'APIs complètes, gestion de la structure globale d'un
+                                            projet complexe, appels aux bases de
+                                            données et organisation du front-end de manière naturelle et aisé en fin de
+                                            deuxième année.
+                                        </p>
+                                    </div>
+                                    <div class="q3">
+                                        <h3>
+                                            Bilan et avis personnel&nbsp;
+                                        </h3>
+                                        <p>Au terme de ce cursus j'estime avoir réellement évolué que ce soit dans
+                                            l'informatique comme dans ma vie personnelle, la pédagogie de cette
+                                            formation
+                                            m'a permis d'acquérir une autonomie et une confiance pour bien démarré ma
+                                            vie dans le monde professionnel.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-------- Expériences -------->
+                <div class="expériences">
+                    <h2>Expériences Professionelles</h2>
+                    <ul class="expériences-list">
+                        <li id="subway">
+                            <img class="expériences-img" src="./images/subway.jpeg" alt="subway icon">
+                            <div class="infos">
+                                <span><strong>Équipier polyvalent</strong></span>
+                                <ul class="infos-list">
+                                    <li>Préparation de commande</li>
+                                    <li>Service client</li>
+                                    <li>Caisse</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li id="dominos">
+                            <img class="expériences-img" src="./images/dominos.jpeg" alt="dominos icon">
+                            <div class="infos">
+                                <span><strong>Équipier polyvalent</strong></span>
+                                <ul class="infos-list">
+                                    <li>Livraison à domicile</li>
+                                    <li>Préparation de commande</li>
+                                    <li>Service client</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li id="metro">
+                            <img class="expériences-img" src="./images/metro.png" alt="dominos icon">
+                            <div class="infos">
+                                <span><strong>Employé commercial</strong></span>
+                                <ul class="infos-list">
+                                    <li>Service client</li>
+                                    <li>Mise en rayon</li>
+                                    <li>Préparation de commande</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li id="zanaka">
+                            <img class="expériences-img" src="./images/zanaka.png" alt="zanaka icon">
+                            <div class="infos">
+                                <span><strong>Garde d'enfants</strong></span>
+                                <ul class="infos-list">
+                                    <li>Responsabilités & Sécurité</li>
+                                    <li>Aide aux devoirs</li>
+                                    <li>Accompagnement aux activités</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-------- QUALITÉS -------->
+                <div class="soft-skills">
+                    <h2>Qualités</h2>
+                    <ul class="soft-skills-list">
+                        <li class="box">Engagé</li>
+                        <li class="box">Curieux</li>
+                        <li class="box">Persévérant</li>
+                        <li class="box">Travail d'équipe</li>
+                        <li class="box">Autonomie</li>
+                        <li class="box">Anglais</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
